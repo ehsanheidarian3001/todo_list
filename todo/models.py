@@ -5,4 +5,4 @@ class Todo(models.Model):
     completed = models.BooleanField(default=False)
 
     def __str__(self) -> str:
-        return self.text
+        return self.text + ("  ✅" if self.completed else "  ❌")
